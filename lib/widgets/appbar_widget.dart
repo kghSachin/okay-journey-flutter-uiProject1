@@ -9,15 +9,15 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
               const CircleAvatar(
-                backgroundImage: AssetImage(ImageLocation.photoCircular),
-                radius: 35,
+                backgroundImage: AssetImage(ImageLocation.photoCircularGirl),
+                radius: 32,
               ),
               const SizedBox(width: 10),
               Column(
@@ -40,18 +40,27 @@ class AppBarWidget extends StatelessWidget {
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(bottom: 5),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 5),
             child: badges.Badge(
-              badgeStyle: badges.BadgeStyle(badgeColor: Color(0xFF363263)),
-              badgeContent: Text(
+              onTap: () {
+                print("hello");
+              },
+              badgeStyle:
+                  const badges.BadgeStyle(badgeColor: Color(0xFF363263)),
+              badgeContent: const Text(
                 "2",
                 style: TextStyle(color: Colors.white),
               ),
-              child: Icon(
-                Icons.notifications_none,
-                color: Color(0xFF363263),
-                size: 35,
+              child: IconButton(
+                onPressed: () {
+                  print("hello 2");
+                },
+                icon: const Icon(
+                  Icons.notifications_none,
+                  color: Color(0xFF363263),
+                  size: 35,
+                ),
               ),
             ),
           )

@@ -10,55 +10,57 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const AppBarWidget(),
-            const Padding(
-              padding: EdgeInsets.only(left: 30.0),
-              child: Text(
-                "Table list",
-                style: TextStyle(color: Colors.grey),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const AppBarWidget(),
+              const Padding(
+                padding: EdgeInsets.only(left: 30.0),
+                child: Text(
+                  "Table list",
+                  style: TextStyle(color: Colors.grey),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15),
-              child: Column(
-                children: [
-                  const TableView(
-                    sel: true,
-                    snn: "S.N",
-                    namee: "Name",
-                    addresss: "Address",
-                    workingStatuss: "Working Status",
-                  ),
-                  const SizedBox(
-                    height: 4,
-                  ),
-                  const TableView(
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                child: Column(
+                  children: [
+                    const TableView(
+                      sel: true,
+                      snn: "S.N",
+                      namee: "Name",
+                      addresss: "Address",
+                      workingStatuss: "Working Status",
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    const TableView(
+                        sel: false,
+                        addresss: "",
+                        namee: "",
+                        snn: "",
+                        workingStatuss: ""),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    const TableView(
                       sel: false,
                       addresss: "",
                       namee: "",
                       snn: "",
-                      workingStatuss: ""),
-                  const SizedBox(
-                    height: 4,
-                  ),
-                  const TableView(
-                    sel: false,
-                    addresss: "",
-                    namee: "",
-                    snn: "",
-                    workingStatuss: "",
-                  ),
-                  Container(
-                    height: 1,
-                    color: Colors.black,
-                  ),
-                ],
-              ),
-            )
-          ],
+                      workingStatuss: "",
+                    ),
+                    Container(
+                      height: 1,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
       floatingActionButton: SizedBox(
