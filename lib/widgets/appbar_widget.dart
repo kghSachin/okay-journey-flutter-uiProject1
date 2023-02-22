@@ -44,7 +44,7 @@ class AppBarWidget extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 5),
             child: badges.Badge(
               onTap: () {
-                print("hello");
+                debugPrint("hello");
               },
               badgeStyle:
                   const badges.BadgeStyle(badgeColor: Color(0xFF363263)),
@@ -54,7 +54,7 @@ class AppBarWidget extends StatelessWidget {
               ),
               child: IconButton(
                 onPressed: () {
-                  print("hello 2");
+                  debugPrint("hello 2");
                 },
                 icon: const Icon(
                   Icons.notifications_none,

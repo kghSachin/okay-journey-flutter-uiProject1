@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutteruitask/widgets/appbar_widget.dart';
 
-import '../widgets/fittedbox.dart';
+import '../widgets/table_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
           // selectedIconTheme: const IconThemeData(color: Colors.white),
           // unselectedIconTheme: const IconThemeData(color: Colors.white),
           selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey,
           selectedLabelStyle: const TextStyle(color: Colors.white),
           unselectedLabelStyle: const TextStyle(color: Colors.white),
           backgroundColor: const Color(0xFF3F3A76),
